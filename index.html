@@ -8,5 +8,27 @@
 </head>
 <body>
     <h1> Sirvio la babosada </h1>
+    <form name="frmControles" id="frmControles" method="get">
+        <input type="text" pattern="[a-zA-Z ]{3,60}" required size="40" placeholder="Nombre"> <br><br>
+        Fecha de Nacimiento: <input type="date" required><br><br>
+        Status:
+        <label for="Soltero">Soltero</label><input type="radio" name="cboStatus" id="Soltero">
+        <label for="Acompañado">Acompañado</label><input type="radio" name="cboStatus" id="Acompañado">
+        <label for="Casado">Casado</label><input type="radio" name="cboStatus" id="Casado">
+        <label for="Divorciado">Divorciado</label><input type="radio" name="cboStatus" id="Divorciado">
+        <label for="Viudo">Viudo</label><input type="radio" name="cboStatus" id="Viudo"><br><br>
+
+        Habilidades:
+        <label for="php">php</label><input type="checkbox" name="php" id="php">
+        <label for="html">html</label><input type="checkbox" name="html" id="html">
+        <label for="css">css</label><input type="checkbox" name="css" id="css">
+        <label for="js">js</label><input type="checkbox" name="js" id="js">
+        <label for="ajax">ajax</label><input type="checkbox" name="ajax" id="ajax">
+        <label for="json">json</label><input type="checkbox" name="json" id="json">
+        <label for="nodejs">nodejs</label><input type="checkbox" name="nodejs" id="nodejs">
+        <label for="webSocket">webSocket</label><input type="checkbox" name="webSocket" id="webSocket">
+
+        <input type="submit" value="Guardar">
+    </form>
 </body>
 </html>
