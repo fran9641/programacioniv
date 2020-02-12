@@ -86,3 +86,8 @@ body{
     background: #ffffff;
     color: #0b7bfa;
 }
+
+.login-box a {
+    text-decoration: none;
+    justify-content: center;
+  }
