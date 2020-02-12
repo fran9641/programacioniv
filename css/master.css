@@ -9,7 +9,7 @@ body{
 
 .login-box{
     width: 320px;
-    height: 420px;
+    height: 500px;
     background: #052280;
     color: #ffffff;
     top: 50%;
@@ -43,6 +43,15 @@ body{
     padding: 0;
     font-weight: bold;
     display: block;
+}
+
+.login-box a{
+    margin-left: 65px;
+    padding: 0;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    
 }
 
 .login-box input{
