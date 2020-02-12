@@ -90,10 +90,9 @@ body{
 
 .login-box a {
     text-decoration: none;
-    font-size: 12px;
-    vertical-align: middle;
-    orientation: center;
-    line-height: 20px;
-    color: rgb(255, 255, 255);
-    justify-content: center;
+    margin-left: 65px;
+    padding: 0;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
   }
