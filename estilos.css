@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../img/estudiante.jpg);
+    background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+}
+
+.container{
+    width: 275px;
+    height: 425px;
+    background: #1b2853;
+    color: #ffffff;
+    top: 50%;
+    left: 25%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 15px 30px;
+    border-style: double;
+}
+
+.container h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+input{
+    height: 24px;
+    width: 215px;
+    border: 2px solid rgb(129, 131, 134);
+    border-radius: 5px;
+}
+input[type=submit],
+input[type=button],
+input[type=file]{
+    background-color: rgb(14, 95, 247);
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bolder;
+    height: 32px;
+    border-color: #ffffff;
+    outline: none;
+    height: 40px;
+}
+input[type=submit]:hover,
+input[type=button]:hover,
+input[type=file]:hover{
+    color:  rgb(56, 99, 218);
+    background-color: #FFF;
+    border: none;
+    outline: none;
+    height: 40px;
+    
+}
+input[type=text]:invalid,
+input[type=date]:invalid,
+input[type=file]:invalid,
+input[type=url]:invalid,
+input[type=tel]:invalid{
+    background-color: rgb(250, 156, 156);
+    color: black;
+    background: transparent;
+}
+input[type=text]:valid, /* Estilo para los input de tipo text, date y file */
+input[type=date]:valid, /* Cuando es valido su contenido */
+input[type=file]:valid,
+input[type=url]:valid,
+input[type=tel]:valid{
+    background-color: rgb(134, 250, 173);
+    color: black;
+}
