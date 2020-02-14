@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", (event) =>{
             direccion = document.querySelector("#txtDireccionAlumno").value,
             telefono = document.querySelector("#txtTelefonoAlumno").value;
 
-            var keycodigo="Codigo"+" ";
-            var keynombre="Nombre"+" ";
-            var keydireccion="Direccion"+" ";
-            var keytelefono="Telefono"+" ";
+            var keycodigo="Codigo "+" ";
+            var keynombre="Nombre "+" ";
+            var keydireccion="Direccion "+" ";
+            var keytelefono="Telefono "+" ";
 
 
         if( 'localStorage' in window ){
