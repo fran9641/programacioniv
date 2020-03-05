@@ -16,10 +16,19 @@ document.addEventListener("DOMContentLoaded", e => {
             "lempira": 24.36,
             "peso MX": 19.36,
             "bitcoin": 0.00026
-        },
+        }
+
+        let almacenamiento = {
+            "megabyte": 1,
+            "bit": 8388608,
+            "byte": 1048576,
+            "kilobyte": 1024,
+            "gigabyte": 0.0009765625,
+            "terabyte": 0.00000095367431660625
+        }
 
 
-            longitud = {
+        longitud = {
                 "metro": 1,
                 "cm": 100,
                 "pulgada": 39.3701,
@@ -34,9 +43,11 @@ document.addEventListener("DOMContentLoaded", e => {
 
         let $res = document.querySelector("#lblRespuesta");
         if (opcion.value == "moneda") {
-            $res.innerHTML = `Respuesta: ${(monedas[a] / monedas[de] * cantidad).toFixed(2)}`;
+            $res.innerHTML = `Respuesta: ${(monedas[a] / monedas[de] * cantidad).toFixed(6)}`;
         } else if (opcion.value == "longitud") {
-            $res.innerHTML = `Respuesta: ${(longitud[a] / longitud[de] * cantidad).toFixed(2)}`;
+            $res.innerHTML = `Respuesta: ${(longitud[a] / longitud[de] * cantidad).toFixed(6)}`;
+        }else if  (opcion.value == "almacenamiento") {
+            $res.innerHTML = `Respuesta: ${(almacenamiento[a] / almacenamiento[de] * cantidad).toFixed(15)}`;
         };
     });
 });
@@ -54,6 +65,8 @@ function seleccionar() {
         var array = ["dolar!Dolar", "colones SV!Colones SV", "yenes!Yenes", "rupia!Rupia", "lempira!Lempira", "peso MX!Peso MX", "bitcoin!Bitcoin"];
     } else if (opcion.value == "longitud") {
         var array = ["metro!Metro", "cm!Cm", "pulgada!Pulgada", "pie!Pie", "varas!Varas", "yardas!Yardas", "km!KM", "millas!Millas"];
+    } else if (opcion.value == "almacenamiento") {
+        var array = ["megabyte!Megabyte", "bit!Bit", "byte!Byte", "kilobyte!Kilobyte", "gigabyte!Gigabyte", "terabyte!Terabyte"];
     };
 
     for (var i = 0; i < array.length; i++) {
