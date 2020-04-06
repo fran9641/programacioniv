@@ -1,21 +1,28 @@
-var $ = el => document.querySelector(el),
-    frmDocentes = ("#frmDocentes");
-frmDocentes.addEventListener("sumit", e=>{
-    e.preventDefault();
-    e.stopPropogation();
-    
-    let docentes = {
-        accion   : 'nuevo',
-        codigo   : $("#txtCodigoDocentes").value,
-        nombre   : $("#txtNombreDocentes").value,
-        correo   : $("#txtCorreoDocentes").value,
-        telefono : $("#txtTelefonoDocentes").value
-    };
-    fetch(`private/modulos/docentes/procesos.php?proceso=recibirDatos&docente=${JSON.stringify(docentes)}`).then( resp=>resp.json() ).then(resp=>{
-        $("#respuestaDocente").innerHTML = `
-            <div class="alert alert-success" role="alert">
-                ${resp.msg}
-            </div>
-        `;
-    });
+var appdocente = new Vue({
+    el:'#frm-docentes',
+    data:{
+        docente:{
+            idDocente  : 0,
+            accion    : 'nuevo',
+            codigo    : '',
+            nombre    : '',
+            dui       : '',
+            telefono  : '',
+            msg       : ''
+        }
+    },
+    methods:{
+        guardarDocente:function(){
+            fetch(`private/modulos/docentes/procesosDOC.php?proceso=recibirDatos&docente=${JSON.stringify(this.docente)}`).then( resp=>resp.json() ).then(resp=>{
+                this.docente.msg = resp.msg;
+                this.docente.idDocente = 0;
+                this.docente.codigo = '';
+                this.docente.nombre = '';
+                this.docente.dui = '';
+                this.docente.telefono = '';
+                this.docente.accion = 'nuevo';
+                appBuscarDocentes.buscarDocente();
+            });
+        }
+    }
 });
